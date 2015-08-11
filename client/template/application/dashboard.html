@@ -1,0 +1,15 @@
+<template name="dashboard">
+  <h1>dashboard</h1>
+  {{> loginButtons}}
+  <div class ="logout">
+    {{#if currentUser}}
+          {{currentUser.profile.name}} - <a data-logout>Logout</a>
+        {{else}}
+          {{#if loggingIn}}
+            Logging in...
+     {{else}}
+       <a data-login>Login with Facebook</a>
+    {{/if}}
+   {{/if}}
+  </div>
+</template>
